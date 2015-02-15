@@ -4,9 +4,9 @@ def sort(input)
     input
   else
     pivot = input.first
-    bigger = input.select{ |a| a > pivot}
+    bigger = sort(input.select{ |a| a > pivot})
     pivots = input.select{ |a | a == pivot}
-    smaller = input.select{ |a| a < pivot}
+    smaller = sort(input.select{ |a| a < pivot})
     return smaller.concat(pivots).concat(bigger)
   end
 end

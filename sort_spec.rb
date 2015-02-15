@@ -16,4 +16,7 @@ describe "sort" do
   it "sort with mutliple pivot" do 
     expect(sort([20,20,10,30])).to eq([10,20,20,30])
   end
+  it "sort recursively" do
+    expect(sort([5,1,2,3,8,7,6,9,4])).to eq([1,2,3,4,5,6,7,8,9])
+  end
 end
